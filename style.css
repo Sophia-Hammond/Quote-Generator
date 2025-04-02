@@ -1,15 +1,22 @@
 body {
+    background-color: rgb(27, 21, 52);
     font-family:monospace;
     text-align: center;
     margin: 50px;
+    color: white;
 }
 
 .container {
-    max-width: 400px;
+    
+    max-width: 700px;
     margin:auto;
     padding: 20px;
     border-radius:10px;
-    box-shadow: 0px 0px 10px gold;
+   
+    color: white; /* Text color */
+    box-shadow: 0 0 20px rgb(84, 244, 255), /* Outer glow */
+                0 0 20px rgb(40, 110, 249), /* Secondary glow */
+                inset 0 0 10px rgb(154, 248, 248); /* Inner glow */
 }
 
 button {
@@ -24,8 +31,8 @@ button {
     /* Glowing outline */
     background-color: #1e1e1e; 
     color: white; /* Text color */
-    box-shadow: 0 0 10px rgba(246, 226, 51, 0.8), /* Outer glow */
-                0 0 20px rgba(250, 236, 84, 0.797), /* Secondary glow */
+    box-shadow: 0 0 10px rgb(64, 35, 251), /* Outer glow */
+                0 0 20px rgba(79, 73, 246, 0.797), /* Secondary glow */
                 inset 0 0 5px rgba(240, 248, 154, 0.853); /* Inner glow */
 
     /* Floating Animation */
