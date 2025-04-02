@@ -52,12 +52,28 @@ images.forEach(src => {
     img.src = src; // Loads the image into memory
 });
 
+// Stops from getting the same image twice in a row
+let lastIndex = -1
+
 function generateImage() {
-    const randomIndex = Math.floor(Math.random() * images.length);
+    let randomIndex
+
+    // Keeps generating till it finds a image diffrent from the last
+    do {
+        randomIndex = Math.floor(Math.random() * images.length);
+    }while (randomIndex === lastIndex);
+
+    lastIndex = randomIndex; // update lastIndex to the new one 
+     
+    // sets the selected img into the <img> element in the HTML
     document.getElementById("quote-image").src = images[randomIndex];
+    
+    // logs selected image
+    console.log("Selected image:", images[randomIndex]);
 }
 
-generateImage();
+    // Runs when page loads 
+    window.onload = generateImage();
 
 
 //Math.random- Generates a random index between 0-41
