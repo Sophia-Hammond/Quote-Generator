@@ -46,6 +46,12 @@ const images = [
         "quoteImages/Quote42.png"
 ];
 
+// pre load images for faster loading 
+images.forEach(src => {
+    const img = new Image(); // creates new image object
+    img.src = src; // Loads the image into memory
+});
+
 function generateImage() {
     const randomIndex = Math.floor(Math.random() * images.length);
     document.getElementById("quote-image").src = images[randomIndex];
