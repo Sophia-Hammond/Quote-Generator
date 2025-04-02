@@ -13,15 +13,49 @@ body {
 }
 
 button {
-    padding: 10px 15px;
-    font-size: 16px;
+    padding: 12px 20px; 
+    font-size: 18px; 
+    font-weight: bold;
     cursor: pointer;
     margin-top: 15px;
+    border-radius: 30px; /* Rounding corners of button */
+    border: none; /* Removes default border */
+    
+    /* Glowing outline */
+    background-color: #1e1e1e; 
+    color: white; /* Text color */
+    box-shadow: 0 0 10px rgba(246, 226, 51, 0.8), /* Outer glow */
+                0 0 20px rgba(250, 236, 84, 0.797), /* Secondary glow */
+                inset 0 0 5px rgba(240, 248, 154, 0.853); /* Inner glow */
+
+    /* Floating Animation */
+    animation: floatUpDown 3s ease-in-out infinite;
+    
+    /* Smooth transition on hover */
+    transition: all 0.3s ease-in-out;
 }
+
+/* Hover effect */
+button:hover {
+    box-shadow: 0 0 15px rgba(0, 255, 255, 1), 
+                0 0 25px rgba(0, 255, 255, 0.8), 
+                inset 0 0 10px rgba(0, 255, 255, 1);
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Floating animation */
+@keyframes floatUpDown {
+    0% { transform: translateY(0px); } /* Start position */
+    50% { transform: translateY(-10px); } /* Float up */
+    100% { transform: translateY(0px); } /* Back to start */
+}
+
 
 img {
     max-width: 100%;
     height:auto;
     margin-top: 10px;
     border-radius: 10px;
+    transition: opacity 0.5s ease-in-out;
 }
+

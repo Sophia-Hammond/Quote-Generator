@@ -72,7 +72,7 @@ function generateImage() {
     console.log("Selected image:", images[randomIndex]);
 }
 
-    // Runs when page loads 
+    // Runs when page loads  
     window.onload = generateImage();
 
 
