@@ -1,5 +1,5 @@
 const quotes = [
     {
-        text:
+        
     }
 ]
