@@ -1,0 +1,27 @@
+body {
+    font-family:monospace;
+    text-align: center;
+    margin: 50px;
+}
+
+.container {
+    max-width: 400px;
+    margin:auto;
+    padding: 20px;
+    border-radius:10px;
+    box-shadow: 0px 0px 10px plum;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+img {
+    max-width: 100%;
+    height:auto;
+    margin-top: 10px;
+    border-radius: 10px;
+}
